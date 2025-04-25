@@ -1,0 +1,175 @@
+body {
+    font-size: 15pt;
+}
+
+#notification {
+  position: absolute ;
+  z-index: 2;
+  margin-left: 30%;
+  opacity: 1;
+  transition: 6s;
+}
+
+#developed {
+  position: absolute ;
+  z-index: 6;
+  margin-left: 30%;
+  opacity: 1;
+  transition: 4s;
+  top: 450px;
+  right: 50px;
+  font-size: 14px;
+  color: whitesmoke;
+  background: green;
+  margin: 0;
+  left: 50px;
+
+}
+
+#developed.hide {
+  opacity: 0;
+  z-index: 6;
+}
+
+#notification.hide{
+  opacity: 0;
+}
+
+#blackscreen {
+  position:fixed;
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  opacity: 0;
+  transition: 2s;
+  pointer-events: none;
+}
+
+#blackscreen.show{
+  opacity: 1;
+  z-index: 5;
+}
+
+#blackscreen.hide {
+  position:fixed;
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  opacity: 0;
+  transition: 3s;
+  pointer-events: none;
+}
+
+#buttonStart {
+  width: 134px;
+  height: 70px;
+  background-image: url("start.gif");
+  background-size: cover;
+  color: yellow;
+  font-size: 30px;
+  cursor: pointer;
+  top: 40%;
+  left: 32%;
+  position: absolute;
+  z-index: 2;
+}
+
+#design {
+  background-image: url("background.gif");
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  left:0;
+  top:0;
+}
+
+#soundOff{
+  position: absolute ;
+  width: 50px;
+  z-index: 3;
+  cursor: pointer;
+}
+
+#soundOn {
+  position: absolute;
+  width: 50px;
+  z-index: 4;
+  cursor: pointer;
+  display: none;
+}
+
+#introduction{
+  display: none;
+}
+
+#stage1 {
+  
+  opacity: 0;
+  font-family: 'Arial', sans-serif;
+  font-size: 1.2em;
+  color: #333;
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 5px;
+  pointer-events: none;
+  transition: 2s;
+}
+
+#stage1.show {
+  opacity: 1;
+}
+
+#linkArcher {
+  opacity: 0;
+  transition: 3s;
+  color: lime;
+  
+}
+
+#linkArcher.show{
+  opacity: 1;
+}
+
+#introLoading{
+  z-index: 100;
+  display: block;
+  opacity: 1;
+  position: fixed;
+  left: 130px;
+  top: 350px;
+  color: darkviolet;
+  transition: 3s;
+}
+
+#introLoading.hide{
+  opacity: 0;
+}
+
+details{
+  position: relative;
+  z-index: 1;
+  bottom:-500px;
+  background-color: cyan;
+}
+
+#commentsPic img{
+  width: 340px;
+  height: 300px;
+}
+
+#com{
+  z-index: 2;
+  display: block;
+  position: absolute;
+  bottom: 27.7px;
+  right: 50px;
+  border-radius: 100px;
+  border: 1px solid;
+  border-radius: 100px;
+  background: magenta;
+}

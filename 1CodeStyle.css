@@ -1,0 +1,86 @@
+#yourCode,
+#codeZero,
+#firstCode {
+  display: inline;
+}
+
+#firstCode {
+  opacity: 0;
+  transition: 3s;
+}
+
+#firstCode.show {
+  opacity: 1;
+}
+
+#loading,
+#pleaseWait,
+#stage2,
+#go2,
+#achievementDiv,
+#respectPic {
+  opacity: 0;
+  transition: 1s;
+}
+
+#loading,
+#pleaseWait {
+  color: chocolate;
+  text-align: center;
+  font-family: Arial;
+}
+
+#loading.show,
+#pleaseWait.show,
+#stage2.show,
+#go2.show {
+  opacity: 1;
+}
+
+#stage2 {
+  font-family: Arial, sans-serif;
+  font-size: 1.2em;
+  color: cyan;
+  background-color: #f0b0f0;
+  padding: 10px;
+  border-radius: 5px;
+  transition: 2s;
+}
+
+#achievementPic,
+#achievementClaim {
+  width: 100px;
+  height: 100px;
+}
+
+#respectButton {
+  color: cyan;
+  font-size: 20px;
+  text-shadow: green;
+  cursor: pointer;
+}
+
+#showStage2 {
+  display: none;
+}
+
+#respectPic {
+  position: fixed;
+  width: 200px;
+  height: 100px;
+  left: 81px;
+  top: 270px;
+  transition: 3s;
+}
+
+#respectPic.show {
+  opacity: 1;
+}
+
+#respectPic.hide {
+  opacity: 0;
+}
+
+.intro-title {
+  font-family: Arial;
+}

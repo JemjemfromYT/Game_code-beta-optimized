@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Credits</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: black;
+      color: white;
+      font-family: 'Courier New', Courier, monospace;
+      overflow: hidden;
+    }
+  
+  body.hide{
+    background: none;
+  }
+
+    .start-screen {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 0;
+    }
+
+    .start-button {
+      padding: 1em 2em;
+      font-size: 1.2em;
+      background: white;
+      color: black;
+      border: none;
+      cursor: pointer;
+      border-radius: 10px;
+      transition: transform 0.2s ease;
+    }
+
+    .start-button:hover {
+      transform: scale(1.1);
+    }
+
+    .credits-container {
+      position: absolute;
+      bottom: -100%;
+      width: 100%;
+      opacity: 0;
+    }
+
+    .credits-container p,
+    .credits-container h1,
+    .credits-container h4 {
+      text-align: center;
+      margin: 20px 0;
+      opacity: 0;
+    }
+
+    @keyframes scrollCredits {
+      0% { bottom: -100%; }
+      100% { bottom: 100%; }
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    .final-message {
+      position: absolute;
+      bottom: 10%;
+      width: 100%;
+      text-align: center;
+      opacity: 0;
+    }
+    
+    #jumpscare{
+      position:fixed;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      z-index: 2000;
+      opacity: 0;
+      pointer-events: none;
+      object-fit: cover;
+    }
+    
+    #jumpscare.show{
+      opacity: 1;
+      z-index: 100;
+      transition: 1s;
+    }
+    
+    #jumpscare.hide{
+      opacity: 0;
+      display: none;
+      transition: 1s;
+    }
+    
+     #jumpscareButton{
+ position: absolute;
+  z-index: 100;
+  opacity: 0;
+  top: 10px;
+  top: 100px;
+  left: 135px;
+  width: 100px;
+  transition: 3s;
+}
+
+#jumpscareButton.show{
+opacity: 1;
+cursor: pointer;
+}
+
+#outro{
+  position: absolute ;
+  z-index: 8;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+ opacity: 0;
+}
+
+#outro.show{
+  opacity: 1;
+  z-index: 29;
+}
+
+#review {
+  z-index: 31;
+  opacity: 0;
+  transition: 3s;
+  position: fixed;
+  pointer-events: none;
+}
+
+#review.show{
+  z-index: 100;
+  opacity: 1;
+  pointer-events: all;
+}
+
+#pleaseWet{
+  color: navy;
+  opacity: 0;
+  transition: 3s;
+}
+
+
+
+
+  </style>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "t8yN3ILBMj_emxnHe",
+      });
+   })();
+   </script>
+</head>
+<body>
+
+
+<div id="visible">
+  <div class="start-screen">
+    <button class="start-button" onclick="startCredits()">Start Credits</button>
+  </div>
+
+
+  <audio src="creditSong.mp3"id="creditSong"></audio>
+
+  <div class="credits-container" id="credits">
+<h1 style="--i:0">The End</h1>
+    <p style="--i:1">Credits:</p>
+    <p style="--i:2">Developed by: James/JemjemfromYT</p>
+    <p style="--i:3">Collabed without permission on:</p>
+    <p style="--i:4">Adnan Zawad Toky</p>
+    <p style="--i:5">r8w9</p>
+    <p style="--i:6">on solo learn!</p>
+    <p style="--i:7">They are the real MVP</p>
+    <p style="--i:8">I only added a function through nesting on my game</p>
+    <p style="--i:9">this credits is created by ai because I was too lazy rn, time check is 9:47AM.<br>Dang I thought its easy to push in github like i thought it will be same flow through between of spck editor files and github.It was give me estimated 3 hours of push because of folder problem (href) on github lol
+    </p>
+    
+    <h4 style="--i:10">This game was created in 3 days</h4>
+  </div>
+  
+ 
+
+  <div class="final-message" id="final">
+    <p id="final1">That's All!</p>
+    <p id="final2">Thanks For Playing!</p>
+
+  </div>
+
+
+
+   </div> 
+    
+    
+    
+     <video src="outro.mp4" id="outro"></video>
+    
+    <div id="review">
+      
+    <p> can you please leave a reiew or message? hehe  </p>
+  <p>your message will be posted on comments at intro within 1-2 days</p>
+  <p>please be true to send hehe</p>
+    
+   
+    <p>name:</p>
+     
+<input id="nameId" name="name" rows="4" cols="40" placeholder="name" required></input>
+
+<p id="pleaseWet">Please wet....</p>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<p style="background-color: lime;">message:</p>
+<textarea id="messageId" name="message" rows="5" cols="30" placeholder="your message"></textarea>
+
+
+<h1 id="output"></h1>
+
+<button onclick="buttonClick()">send</button>
+    
+    <div id="YouMay">
+<h6><i style="color: red">you may also like:</i>
+<br>
+<a href="
+https://jemjemfromyt.github.io/JamesVirus/">1. James V1rus</a>
+<br>
+<a href="https://jemjemfromyt.github.io/V1rus-questions/">2. V1rus questions </a>
+<br>
+<a href="https://jemjemfromyt.github.io/Chenyao-V1rus/">3. Chenyao V1rus: The phone destoryer</a>
+</h6>
+</div>
+        
+   </div>
+<button id="jumpscareButton">Skip Credits</button> 
+    
+    <video src="jumpscare.mp4"id="jumpscare"></video>
+    
+    
+    
+    
+<audio id="audioPlayer" src="click.mp3"></audio>  <!-- Hidden audio element -->
+    
+    
+    
+
+    
+    
+    
+    <script src="credits.js"></script>
+  <script>
+    function startCredits() {
+      document.querySelector('.start-screen').style.display = 'none';
+      const credits = document.getElementById('credits');
+      const lines = credits.children;
+      let creditSong = document.getElementById ("creditSong")
+      let jumpscareButton = document.getElementById ("jumpscareButton")
+      
+      jumpscareButton.addEventListener("click",function(){
+  creditSong.pause()
+  visible.style.display="none"
+})
+     
+      
+      
+      
+      setTimeout(()=>{
+        jumpscareButton.classList.add("show")
+      
+      jumpscareButton.addEventListener("click", function(){
+        creditSong.pause()
+        visible.style.display="none"
+      });
+      },7000);
+      
+      creditSong.play()
+
+      credits.style.opacity = '1';
+      credits.style.animation = 'scrollCredits 40s linear forwards';
+
+      for (let i = 0; i < lines.length; i++) {
+        lines[i].style.animation = `fadeIn 3s ease-in forwards`;
+        lines[i].style.animationDelay = `${1 + i * 1.5}s`;
+      }
+
+      // Show final messages after scrolling
+      setTimeout(() => {
+        const final = document.getElementById('final');
+        const final1 = document.getElementById('final1');
+        const final2 = document.getElementById('final2');
+
+        final.style.opacity = 1;
+        final1.style.animation = "fadeIn 3s ease-in forwards";
+        final1.style.animationDelay = "0s";
+        setTimeout(() => {
+          final2.style.animation = "fadeIn 3s ease-in forwards";
+          
+          setTimeout(()=>{
+          final1.style.display="none"
+          final2.style.display="none"
+          },3500);
+          jumpscareButton.classList.add("show")
+             
+        }, 3000);
+      }, 41000); // Wait until scroll is done
+    }
+  </script>
+
+</body>
+</html>

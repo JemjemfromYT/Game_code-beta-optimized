@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="1CodeStyle.css" />
+  <title>Stage 2</title>
+</head>
+<body>
+  <div id="showStage2">
+    <div id="introduction">
+      <h3 class="intro-title">Please Enter Code</h3>
+      <input id="inputCode" type="number" />
+      <button id="buttonCode">Enter</button>
+    </div>
+
+    <h2 id="yourCode">Your Code:
+      <span id="code0">
+        <span id="firstCode" class="firstCode">8</span>***
+      </span>
+    </h2>
+
+    <h4 id="loading">Feyk loading...</h4>
+    <h4 id="pleaseWait">Please wait...</h4>
+
+    <div id="stage2">Stage 2: The Pong</div>
+    <button id="go2">Go</button>
+
+    <div id="achievementDiv">
+      <p>Achievements:</p>
+      <img src="arrowAchievement.png" id="achievementPic" />
+    </div>
+
+    <img src="respectPic.png" id="respectPic" />
+  </div>
+
+  <button id="respectButton">
+    <img src="arrowAchievement.png" id="achievementClaim" />
+    Claim
+  </button>
+
+  <audio src="respect.mp3" id="respect"></audio>
+  <audio src="achievement.mp3" id="achievement"></audio>
+  <audio src="click.mp3" id="audioPlayer"></audio>
+
+  <script src="1CodeMain.js"></script>
+  <script src="2CodeMain.js"></script>
+</body>
+</html>

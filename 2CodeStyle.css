@@ -1,0 +1,114 @@
+#yourCode22,
+#code022,
+#firstCode22 {
+  display: inline;
+}
+
+#firstCode22 {
+  opacity: 0;
+  transition: 3s;
+}
+
+#firstCode22.show {
+  opacity: 1;
+}
+
+#loading22,
+#pleaseWait22 {
+  opacity: 0;
+  transition: 1s;
+  text-align: center;
+  font-family: Arial;
+}
+
+#loading22 {
+  color: red;
+}
+
+#loading22.show,
+#pleaseWait22.show {
+  opacity: 1;
+}
+
+#stage22 {
+  opacity: 0;
+  font-family: Arial, sans-serif;
+  font-size: 1.2em;
+  color: white;
+  background-color: #f0ac30;
+  padding: 10px;
+  border-radius: 5px;
+  transition: 2s;
+}
+
+#stage22.show {
+  opacity: 1;
+}
+
+#go22 {
+  opacity: 0;
+  transition: 3s;
+}
+
+#go22.show {
+  opacity: 1;
+}
+
+#achievementPic22,
+#achievementPic222,
+#achievementClaim22 {
+  width: 100px;
+  height: 100px;
+}
+
+#achievementPic222 {
+  transition: 3s;
+}
+
+#respectButton22 {
+  color: cyan;
+  font-size: 20px;
+  text-shadow: green;
+  cursor: pointer;
+}
+
+#showStage22 {
+  display: none;
+}
+
+#achievementDiv22 {
+  opacity: 0;
+}
+
+#respectPic22 {
+  position: fixed;
+  width: 200px;
+  height: 100px;
+  left: 81px;
+  top: 270px;
+  opacity: 0;
+  transition: 3s;
+}
+
+#respectPic22.show {
+  opacity: 1;
+}
+
+#respectPic22.hide {
+  opacity: 0;
+}
+
+#terrifying22 {
+  z-index: -1;
+  background-size: cover;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.intro-title {
+  font-family: Arial;
+}
